@@ -55,12 +55,6 @@
       state: present
     become: true
 
-  - name: ensure HTTP2 is set
-    apache2_module:
-      name: http2
-      state: 'present'
-    become: true
-
   - name: ensure HTTP vhosts are set
     file:
       src: /etc/apache2/sites-available/000-default.conf
