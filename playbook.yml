@@ -103,7 +103,7 @@
 
   - name: add NodeSource to sources
     copy:
-      content: "deb https://deb.nodesource.com/node_6.x jessie main"
+      content: "deb https://deb.nodesource.com/node_6.x stretch main"
       dest: /etc/apt/sources.list.d/nodesource.list
       owner: root
       group: root
