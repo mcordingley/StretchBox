@@ -7,6 +7,14 @@
       update_cache: yes
     become: true
 
+  - name: install utilities
+    apt:
+      name: '{{ item }}'
+      state: present
+    become: true
+    with_items:
+    - zip
+
   - name: copy install-guest-additions.sh
     template:
       src: install-guest-additions.sh.j2
