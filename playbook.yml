@@ -105,12 +105,20 @@
 
   - name: add NodeSource to sources
     copy:
-      content: "deb https://deb.nodesource.com/node_6.x stretch main"
+      content: "deb https://deb.nodesource.com/node_8.x stretch main"
       dest: /etc/apt/sources.list.d/nodesource.list
       owner: root
       group: root
       mode: 0644
     become: true
+
+  - name: ensure node dependencies are installed
+    apt:
+      name: '{{ item }}'
+      state: present
+    become: true
+    with_items:
+    - libpng-dev
 
   - name: ensure nodejs is installed
     apt:
