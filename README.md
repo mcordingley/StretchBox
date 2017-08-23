@@ -18,7 +18,7 @@ along with Composer installed via apt.
 
 Debian Stretch (9.0) ships with Node 4. As of Stretch's release, the current
 releases of Node are 6 LTS and 8. To get a reasonably up to date version of Node
-installed, Node 6 LTS is installed through the NodeSource repositories.  No NPM
+installed, Node 8 is installed through the NodeSource repositories.  No NPM
 packages are installed by default, but can easily be included in a provision script. 
 
 ## Database Configuration
