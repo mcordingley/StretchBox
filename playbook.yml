@@ -105,7 +105,7 @@
 
   - name: add NodeSource to sources
     copy:
-      content: "deb https://deb.nodesource.com/node_8.x stretch main"
+      content: "deb https://deb.nodesource.com/node_10.x stretch main"
       dest: /etc/apt/sources.list.d/nodesource.list
       owner: root
       group: root
